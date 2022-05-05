@@ -1,0 +1,283 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+:root {
+	--main-text-color: #566F96;
+	--button-dimmed: #AEDBCE;
+	--button-active: #30C598;
+	--secondary-bg: #fff;
+	--border-color: #CED0DB;
+	--form-text-color: #353B48;
+	--button-text-color: #fff;
+
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Roboto;
+	background-image: url("../Assets/Bg.svg");
+	background-size: cover;
+	min-width: 340px;
+}
+
+.registration {}
+
+header .page-wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 80px 0 80px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2em;
+}
+
+.logo{
+	padding-left: 80px;
+}
+
+.logo>span {
+	display: inline-block;
+}
+
+nav>span {
+	padding: 32px;
+}
+
+
+.logo-img {
+	height: 32px;
+	width: 40px;
+	background-image: url("../Assets/Planet (logo).svg");
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	left: 5px;
+}
+
+.nav-title::before{
+	display: inline-block;
+	position: absolute;
+	content: "";
+	border-left: 1px solid var(--main-text-color);
+	width: 10px;
+	height: 26px;
+	right: 85px;
+	top: 5px;
+}
+
+header, footer {
+	color: var(--main-text-color);
+}
+
+nav>span:nth-child(3){
+	padding-right: 52px;
+}
+
+.icon{
+	display: inline-block;
+	background-image: url("../Assets/icons/Icon.svg");
+	background-position: center;
+	width: 16px;
+	height: 16px;
+}
+
+/*Menu Button*/
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: none;
+    background-color: var(--main-text-color);
+    /*position: absolute;*/
+    height: 3px;
+    width: 24px;
+    /*transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);*/
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 12px;
+}
+
+/*FORM*/
+
+.registration-img{
+	width: 50%;
+}
+
+.registration-card{
+	max-height: 580px;
+	max-width: 515px;
+	border-radius: 20px;
+	min-width: 343px;
+	min-height: 540px;
+	background-color: var(--secondary-bg);
+	margin: 16px;
+}
+
+.registration{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+form{
+	height: 400px;
+}
+
+body>section{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+
+.flex-colomn{
+	display: flex;
+	flex-direction: column;
+}
+
+.form-wrapper{
+	min-width: 50%;
+	padding: 48px;
+}
+
+.form-titile {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 50px;
+	letter-spacing: 0em;
+	text-align: left;
+	padding-bottom: 8px;
+	color: var(--form-text-color);
+	max-height: 100px;
+}
+
+select, input{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	width: 280px;
+	height: 48px;
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	padding: 12px;
+}
+
+label{
+	margin-top: 24px;
+	margin-bottom: 8px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+	color: var(--form-text-color);
+}
+
+button{
+	background-color: var(--button-dimmed);
+	border: none;
+	border-radius: 4px;
+	color: var(--button-text-color);
+	padding: 9px 24px;
+	width: 193px;
+	height: 48px;
+	margin-top: 40px;
+}
+
+footer{
+	position: fixed;
+	padding: 20px 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+/*Media*/
+
+@media (max-width: 1020px) {
+    .registration-img{
+        position: absolute;
+        top: 22%;
+        left: 30%;
+        width: 600px;
+    }
+
+    .registration-card {
+        margin: 0 15px;
+        min-width: 345px;
+        padding-top: 0;
+        margin-top: 4px;
+    }
+
+    .button {
+        width: 280px;
+    }
+
+    .form-title {
+        font-size: 30px;
+        line-height: 36px;
+        min-width: 300px;
+    }
+    
+    .registration-card {
+        z-index: 99;
+    }
+
+    .form-wrapper {
+        padding: 32px;
+    }
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .logo-img {
+        left: 0;
+    }
+
+    .nav-title {
+        padding-left: 85px;
+    }
+	.menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+    }
+
+    section {
+        position: relative;
+    }
+
+    nav{
+    	display: none;
+    }
+
+    header{
+	padding: 16px;
+	}
+}
